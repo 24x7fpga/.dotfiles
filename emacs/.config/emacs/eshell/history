@@ -1,0 +1,12 @@
+ls -l 
+cd ..
+w
+ls -la
+ls 
+ls -la
+zsh 
+ls -la
+zsh 
+ mkdir interviewTopics
+cd interviewTopics/
+topics.org

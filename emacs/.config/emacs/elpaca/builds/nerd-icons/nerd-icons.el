@@ -1,0 +1,1 @@
+/home/kiran/.config/emacs/elpaca/repos/nerd-icons/nerd-icons.el

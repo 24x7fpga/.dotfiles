@@ -1,0 +1,2 @@
+;; Generated package description from zuul.el  -*- no-byte-compile: t -*-
+(define-package "zuul" "0.4.0" "Interface to Zuul" '((emacs "27.1") (project "0.8.1")) :commit "c94886cb7abdea66ba1d0a064a4d93efed10fed4" :authors '(("Niklas Eklund" . "niklas.eklund@posteo.net")) :maintainer '("zuul.el Development" . "~niklaseklund/zuul.el@lists.sr.ht") :keywords '("convenience" "tools") :url "https://sr.ht/~niklaseklund/zuul.el")

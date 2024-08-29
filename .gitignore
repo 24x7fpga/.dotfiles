@@ -1,0 +1,10 @@
+emacs/.config/emacs/autosave-list
+emacs/.config/emacs/bookmarks
+emacs/.config/emacs/org-roam.db
+emacs/.config/emacs/projectile-bookmarks.eld
+emacs/.config/emacs/recentf
+emacs/.config/emacs/sessions
+emacs/.config/emacs/tramp
+emacs/.config/emacs/.org-id-locations
+
+qtile/.config/qtile/__pycache__

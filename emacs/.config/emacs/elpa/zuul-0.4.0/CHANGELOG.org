@@ -1,0 +1,26 @@
+#+title: zuul.el - Changelog
+#+author: Niklas Eklund
+#+language: en
+
+* Develop
+
+* Version 0.4.0 (2022-09-01)
+
+- Reduce the required Emacs version from 28.1 to 27.1
+- Adapt semantic versioning
+
+* Version 0.3 (2022-08-30)
+
+- Make package is available on ELPA
+- Improve package quality by implementing suggestions from tools and reviewers
+
+* Version 0.2 (2022-08-25)
+
+- Simplify for users/packages to utilize =zuul=
+- Add commands to navigate between previous and next command prompt in logs
+- Highlight line with command and add prompt to make it reminiscent to a shell
+- Update log buffer to contain the executed commands
+
+* Version 0.1 (2022-07-19)
+
+- Initial release
