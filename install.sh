@@ -53,6 +53,9 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install ffmpeg obs-studio
 
+#install vs code
+sudo snap install --classic code
+
 # install syncthing
 sudo apt-get install syncthing
 # start syncthing on power up => @kiran = @{user_name}; to find username execute $whoami
@@ -61,7 +64,7 @@ sudo systemctl enable syncthing@kiran
 # install gnu stow
 sudo apt-get install stow
 # clone all the dotfiles
-git clone ~/
+git clone https://github.com/24x7fpga/.dotfiles.git 
 # link config files
 cd ~/.dotfiles
 stow emacs
@@ -69,6 +72,7 @@ stow qtile
 stow rofi
 stow zsh
 
+cd ~
 
 # install miscellaneous softwares
 sudo apt-get install tkdiff
