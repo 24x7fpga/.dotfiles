@@ -43,10 +43,14 @@ getnf
 sudo apt-get install font-manager
 
 # install calculator 
-sudo apt-get install qalculate
+sudo apt-get install qalculatess
 
 # install screenshort
 sudo apt-install screenshot
+
+
+# install kitty
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
 # install  OBS studio
 sudo add-apt-repository ppa:obsproject/obs-studio

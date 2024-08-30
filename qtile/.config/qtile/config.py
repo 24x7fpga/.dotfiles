@@ -38,7 +38,7 @@ from libqtile import hook
 import colors
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "kitty"
 myBrowser = "firefox" # My default brower
 #myEmacs = "emacsclient -c -a 'emacs' " # The space at the end is IMPORTANT!
 myEmacs = "emacs"
