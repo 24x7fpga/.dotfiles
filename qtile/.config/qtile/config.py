@@ -207,13 +207,15 @@ extension_defaults = widget_defaults.copy()
 
 def init_widgets_list():
     widgets_list = [
+    	widget.Spacer(length = 15),
+    	
         widget.Image(
                 filename = "~/.config/qtile/icons/org.png",
                 scale = "False",
                 mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
             ),
         
-        widget.Spacer(length = 5),
+        widget.Spacer(length = 15),
 
         widget.GroupBox(
                 fontsize = 18,
