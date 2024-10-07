@@ -126,16 +126,11 @@ export PATH=$PATH:${QUARTUS_ROOTDIR}/bin
 export LM_LICENSE_FILE=${INTEL_ROOTDIR}/licenses/license.dat
 
 # Run Python Scripts
-export PATH="/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/iVerilog:$PATH"
-export PATH="/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/sv_scripts:$PATH"
-export PATH="/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/uvm_scripts:$PATH"
-export PYTHONPATH="/home/kiran/Desktop/pythonRUN/test.py":"${PYTHONPATH}"
-export PATH="$HOME/Desktop/pythonRUN/test.py:$PATH"
-# alias worked but not the path
-alias python='$HOME/Desktop/pythonRUN'
-alias python='/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/iVerilog'
-alias python='/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/sv_scripts'
-alias python='/home/kiran/Projects/fpgaProjects_pythonScripts/PythonScripts/uvm_scripts'
+# export PATH="/home/kiran/Projects/Python_Scripts/*:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/iVerilog:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/sv_scripts:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/uvm_scripts:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/vivado:$PATH"
 
 # Anaconda
 export PATH=~/Installations/anaconda3/bin:$PATH
@@ -148,3 +143,5 @@ alias vim="nvim"
 PATH="$HOME/.config/qtile:$PATH"
 
 export QSYS_ROOTDIR="/home/kiran/Installations/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
+
+export PATH=$PATH:/opt/modelsim_ase/bin
