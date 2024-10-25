@@ -118,12 +118,23 @@ source /tools/Xilinx/Vitis/2022.2/settings64.sh
 # Run Vitis_HLS
 source /tools/Xilinx/Vitis_HLS/2022.2/settings64.sh
 
+
 # Intel Altera Quartus Environment
-export INTEL_ROOTDIR="/tools/intelFPGA_lite/22.1std"
-export QUARTUS_ROOTDIR=${INTEL_ROOTDIR}/quartus
-export PATH=$PATH:${QUARTUS_ROOTDIR}/bin
+#export INTEL_ROOTDIR="$HOME/Installations/intelFPGA_lite/23.1std"
+#export QUARTUS_ROOTDIR=${INTEL_ROOTDIR}/quartus
+#export PATH=$PATH:${QUARTUS_ROOTDIR}/bin
+#export QUESTA_ROOTDIR=${INTEL_ROOTDIR}/questa_fse
+#export PATH=$PATH:${QUESTA_ROOTDIR}/bin
 # For License File
-export LM_LICENSE_FILE=${INTEL_ROOTDIR}/licenses/license.dat
+#export LM_LICENSE_FILE=${INTEL_ROOTDIR}/licenses/LR-197413_License.dat
+
+# Questa Sim Environment Variables
+export INTEL_ROOTDIR="$HOME/intelFPGA/23.1std"
+export QUESTA_ROOTDIR=${INTEL_ROOTDIR}/questa_fse
+export PATH=$PATH:${QUESTA_ROOTDIR}/bin
+# For License File
+export MGLS_LICENSE_FILE=${INTEL_ROOTDIR}/licenses/LR-197413_License.dat
+
 
 # Run Python Scripts
 # export PATH="/home/kiran/Projects/Python_Scripts/*:$PATH"
@@ -142,6 +153,7 @@ alias vim="nvim"
 # Path for Qtile
 PATH="$HOME/.config/qtile:$PATH"
 
-export QSYS_ROOTDIR="/home/kiran/Installations/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
+#PATH to Verilator
+PATH="$HOME/Installations/verilator/oss-cad-suite/bin:$PATH"
+export PATH=$HOME/Installations/verilator/oss-cad-suite/bin:$PATH
 
-export PATH=$PATH:/opt/modelsim_ase/bin
