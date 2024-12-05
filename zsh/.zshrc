@@ -138,10 +138,13 @@ export MGLS_LICENSE_FILE=${INTEL_ROOTDIR}/licenses/LR-197413_License.dat
 
 # Run Python Scripts
 # export PATH="/home/kiran/Projects/Python_Scripts/*:$PATH"
-export PATH="$HOME/Projects/Python_Scripts/iVerilog:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/iv_scripts:$PATH"
 export PATH="$HOME/Projects/Python_Scripts/sv_scripts:$PATH"
 export PATH="$HOME/Projects/Python_Scripts/uvm_scripts:$PATH"
-export PATH="$HOME/Projects/Python_Scripts/vivado:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/rtl_scripts:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/veri_scripts:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/vivado_scripts:$PATH"
+export PATH="$HOME/Projects/Python_Scripts/clean_scripts:$PATH"
 
 # Anaconda
 export PATH=~/Installations/anaconda3/bin:$PATH
