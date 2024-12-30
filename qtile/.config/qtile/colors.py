@@ -23,7 +23,14 @@ Dracula  = [
     ["#f1fa8c", "#f1fa8c"], # color04
     ["#bd93f9", "#bd93f9"], # color05
     ["#ff79c6", "#ff79c6"], # color06
-    ["#9aedfe", "#9aedfe"]  # color15
+    ["#9aedfe", "#9aedfe"], # color15
+    ["#2E3440", "#2E3440"], # color17
+    ["#3B4252", "#3B4252"], # color16
+    ["#83879C", "#83879C"], # color17
+    ["#4E5564", "#4E5564"], # color18
+    ["#414558", "#414558"], # color19
+    ["#2D323E", "#2D323E"], # color20
+    ["#1A1B23", "#1A1B23"], # color21
     ]
 
 GruvboxDark  = [

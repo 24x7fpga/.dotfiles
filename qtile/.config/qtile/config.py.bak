@@ -189,9 +189,9 @@ colors = colors.Dracula
 # Some settings that I use on almost every layout, which saves us
 # from having to type these out for each individual layout.
 layout_theme = {"border_width": 3,
-                "margin": 0,
+                "margin": 2,
                 "border_focus": colors[6],
-                "border_normal": colors[0],
+                "border_normal": colors[0]
                 }
 
 layouts = [
@@ -223,104 +223,135 @@ extension_defaults = widget_defaults.copy()
 
 powerline = {
     "decorations": [
-        PowerLineDecoration(use_widget_background=True, padding_y=5, filled=True, radius=5),
-        PowerLineDecoration(path="forward_slash", padding_y=0)
+        PowerLineDecoration(use_widget_background=True, padding_y=5, filled=True, radius=0),
+        PowerLineDecoration(path="forward_slash", padding_y=5)
     ]
 }
 
 def init_widgets_list():
     widgets_list = [
-    	widget.Spacer(length = 10,background = colors[14],),
+    	widget.Spacer(length = 15,),
     	
         widget.Image(
-                filename = "~/.config/qtile/icons/emacs.svg",
+                filename = "~/.config/qtile/icons/org.png",
                 scale = "False",
-                #mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
-                background = colors[14],
+                mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
+                padding_x = 3,
+                **powerline,
+                background = colors[2],
             ),
+        
+        widget.Spacer(length = 15),
 
         widget.GroupBox(
                 fontsize = 20,
-                borderwidth = 7,
-                active = colors[4],
-                inactive = colors[1],
-                highlight_color = colors[14],
-                this_current_screen_border = colors[14],
-                this_screen_border = colors [14],
-                background = colors[14],
+                margin_y = 3,
+                margin_x = 4,
+                padding_y = 2,
+                padding_x = 3,
+                borderwidth = 3,
+                active = colors[1],
+                #inactive = colors[1],
+                rounded = False,
+                highlight_color = colors[2],
+                highlight_method = "line",
+                this_current_screen_border = colors[7],
+                this_screen_border = colors [4],
+                other_current_screen_border = colors[7],
+                other_screen_border = colors[4],
+                background = colors[1],
                 **powerline,
             ),
-
-        widget.Spacer(length = 15, background = colors[13],),
+        widget.TextBox(
+                text = '|',
+                font = "JetBrains Mono",
+                foreground = colors[1],
+                padding = 2,
+                #fontsize = 14
+            ),
+        widget.Spacer(length = 5),
         
         widget.CurrentLayoutIcon(
                 # custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                #foreground = colors[1],
+                foreground = colors[1],
                 padding = 0,
-                scale = 0.45,
-                background = colors[13],
-                #**powerline,
+                scale = 0.5
             ),
-        widget.Spacer(length = 15, background = colors[13], **powerline),
+        widget.Spacer(length = 5),
         
+        #widget.CurrentLayout(
+        #       foreground = colors[1],
+        #       padding = 5
+        #       ),
+        # widget.TextBox(
+        #         text = '|',
+        #         font = "JetBrains Mono",
+        #         foreground = colors[1],
+        #         padding = 2,
+        #         fontsize = 14
+        #     ),
         widget.Prompt(
                 font = "JetBrains Mono",
                 fontsize=15,
                 foreground = colors[1]
         	),  
-        
-        widget.Spacer(length = 15),
-        
+        widget.TextBox(
+                text = '|',
+                font = "JetBrains Mono",
+                foreground = colors[1],
+                padding = 2,
+               #fontsize = 14
+            ),  
         widget.WindowName(
                 foreground = colors[7],
-                max_chars = 60
+                max_chars = 200
             ),
+        widget.Spacer(length = 15),
         
-        widget.Spacer(length = 15,
-                background = colors[15],
-                **powerline,
-            ),
 
-        widget.Spacer(length = 10,
-                background = colors[12],
-            ),
-        
         widget.Wttr(
                 location={'Grand Rapids, MI':''},
-                format='%c%t  %C',
+                format='%c%t  %C  %p  %m',
                 center_aligned = True,
-                background = colors[12],
             ),
+        widget.Spacer(length = 15),
        
-        widget.Spacer(length = 10,
-                background = colors[12],
-                **powerline,
-            ),
+        #widget.CPU(
+        #        format = ' Cpu:{freq_current}GHz',
+        #   ),
+        #widget.Spacer(length = 15),
+        #widget.Memory(
+        #        #foreground = colors[8],
+        #        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+        #        format = '{MemUsed: .0f}{mm}',
+        #        fmt = '🖥 RAM:{} used',
+        #    ),
+        #widget.Spacer(length = 15),
+        #widget.DF(
+        #	    update_interval = 60,
+        #        #foreground = colors[5],
+        #        mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e df')},
+        #        partition = '/',
+        #        #format = '[{p}] {uf}{m} ({r:.0f}%)',
+        #        format = '{uf}{m} free',
+        #        fmt = '🖴 Disk: {}',
+        #        visible_on_warn = False,
+        #	),
+        #widget.Spacer(length = 15),
         
-        widget.Spacer(length = 15,
-                background = colors[13],
-            ),
-       
         widget.Volume(
-                fmt =  '{}',
-                background = colors[13],
+                #foreground = colors[7],
+                fmt = '🔊 {}',
             ),
-
-        widget.Spacer(length = 15,
-                background = colors[13],
-                **powerline,),
+        widget.Spacer(length = 15),
+        widget.Clock(format = "📅 %a, %b %d"),
+        widget.Spacer(length = 15),
+        widget.Clock(format='⏰ %I:%M %p'),
         
-        widget.Spacer(length = 10, background = colors[14],),
-       
-        widget.Clock(format=' %I:%M %p',
-                background = colors[14],
-        ),
-        
-        widget.Spacer(length = 15,
-                background = colors[14],
-        ),
+        widget.Spacer(length = 15),
         ]
     return widgets_list
+
 
 
 # Monitor 1 will display ALL widgets in widgets_list. It is important that this
@@ -341,9 +372,9 @@ def init_widgets_screen2():
 
 # Enable Qtile Bar by uncommenting these lines
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), background= colors[15], size=42, opacity=0.9, border_width=[0,0,0,0], margin=[0,0,0,0],)), # margin=[5,10,6,10] 
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), background= colors[15], size=42, opacity=0.9, border_width=[0,0,0,0],)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), background= colors[15], size=42, opacity=0.9, border_width=[0,0,0,0],))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), background="#00000000", size=32, opacity=0.9, border_width=[3,0,3,0], margin=[5,5,3,5],)), # margin=[5,10,6,10] 
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), background="#00000000", size=32, opacity=0.9, border_width=[3,0,3,0],)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), background="#00000000", size=32, opacity=0.9, border_width=[3,0,3,0],))]
 
 #def init_screens():
 #     return [Screen()]
