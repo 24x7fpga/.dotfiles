@@ -230,7 +230,7 @@ powerline = {
 
 def init_widgets_list():
     widgets_list = [
-    	widget.Spacer(length = 10,background = colors[14],),
+    	widget.Spacer(length = 5,background = colors[14], **powerline),
     	
         widget.Image(
                 filename = "~/.config/qtile/icons/emacs.svg",
@@ -239,29 +239,31 @@ def init_widgets_list():
                 background = colors[14],
             ),
 
+    	widget.Spacer(length = 10,background = colors[14], **powerline),
+        
         widget.GroupBox(
                 fontsize = 20,
                 borderwidth = 7,
                 active = colors[4],
                 inactive = colors[1],
-                highlight_color = colors[14],
-                this_current_screen_border = colors[14],
-                this_screen_border = colors [14],
-                background = colors[14],
+                highlight_color = colors[13],
+                this_current_screen_border = colors[13],
+                this_screen_border = colors [13],
+                background = colors[13],
                 **powerline,
             ),
 
-        widget.Spacer(length = 15, background = colors[13],),
+        widget.Spacer(length = 15, background = colors[12],),
         
         widget.CurrentLayoutIcon(
                 # custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
                 #foreground = colors[1],
                 padding = 0,
                 scale = 0.45,
-                background = colors[13],
+                background = colors[12],
                 #**powerline,
             ),
-        widget.Spacer(length = 15, background = colors[13], **powerline),
+        widget.Spacer(length = 15, background = colors[12], **powerline),
         
         widget.Prompt(
                 font = "JetBrains Mono",
