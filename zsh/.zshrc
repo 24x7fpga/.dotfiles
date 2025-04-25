@@ -159,4 +159,3 @@ PATH="$HOME/.config/qtile:$PATH"
 #PATH to Verilator
 PATH="$HOME/Installations/verilator/oss-cad-suite/bin:$PATH"
 export PATH=$HOME/Installations/verilator/oss-cad-suite/bin:$PATH
-
